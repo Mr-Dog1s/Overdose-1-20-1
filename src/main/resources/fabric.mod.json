@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "overdose",
+  "version": "${version}",
+  "name": "Overdose 1-20-1",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/overdose/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "fabric-datagen": [
+      "dog1s.overdose.client.OverdoseDataGenerator"
+    ],
+    "client": [
+      "dog1s.overdose.client.OverdoseClient"
+    ],
+    "main": [
+      "dog1s.overdose.Overdose"
+    ]
+  },
+  "mixins": [
+    "overdose.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
