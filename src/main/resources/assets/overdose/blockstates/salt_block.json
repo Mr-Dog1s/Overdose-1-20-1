@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "overdose:block/salt_block"
+    }
+  }
+}

@@ -1,5 +1,7 @@
 package dog1s.overdose;
 
+import dog1s.overdose.block.ModBlocks;
+import dog1s.overdose.item.ModItemGroups;
 import dog1s.overdose.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
@@ -12,5 +14,7 @@ public class Overdose implements ModInitializer {
     @Override
     public void onInitialize() {
         ModItems.registerModItem();
+        ModItemGroups.registerItemGroups();
+        ModBlocks.registerModBlock();
     }
 }
