@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "overdose:salt_block"
+    }
+],
+  "result": {
+    "item": "overdose:salt",
+    "count": 9
+  }
+}
