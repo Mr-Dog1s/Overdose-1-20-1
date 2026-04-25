@@ -18,6 +18,7 @@ public class ModItemGroups {
                     .icon(() -> new ItemStack(ModItems.SALT)).entries(((displayContext, entries) -> {
                         entries.add(ModItems.SALT);
                         entries.add(ModBlocks.SALT_BLOCK);
+                        entries.add(ModItems.PEPPER);
                     })).build());
 
     public static void registerItemGroups(){
