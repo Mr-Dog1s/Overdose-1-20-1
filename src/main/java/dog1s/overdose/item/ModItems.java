@@ -14,6 +14,8 @@ public class ModItems {
 
     public static final Item SALT = registerItem("salt", new Item(new FabricItemSettings()));
 
+    public static final Item PEPPER = registerItem("pepper", new Item(new FabricItemSettings()));
+
     private static void addItemGroup(FabricItemGroupEntries entries){
         entries.add(SALT);
     }
