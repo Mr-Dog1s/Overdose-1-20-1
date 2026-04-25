@@ -1,6 +1,7 @@
 package dog1s.overdose.item;
 
 import dog1s.overdose.Overdose;
+import dog1s.overdose.item.custom.DetectorItem;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
@@ -15,6 +16,8 @@ public class ModItems {
     public static final Item SALT = registerItem("salt", new Item(new FabricItemSettings()));
 
     public static final Item PEPPER = registerItem("pepper", new Item(new FabricItemSettings()));
+
+    public static final Item DETECTOR = registerItem("detector", new DetectorItem(new FabricItemSettings().maxDamage(5)));
 
     private static void addItemGroup(FabricItemGroupEntries entries){
         entries.add(SALT);

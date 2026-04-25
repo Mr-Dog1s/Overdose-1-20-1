@@ -19,6 +19,7 @@ public class ModItemGroups {
                         entries.add(ModItems.SALT);
                         entries.add(ModBlocks.SALT_BLOCK);
                         entries.add(ModItems.PEPPER);
+                        entries.add(ModItems.DETECTOR);
                     })).build());
 
     public static void registerItemGroups(){
