@@ -1,6 +1,7 @@
 package dog1s.overdose.item;
 
 import dog1s.overdose.Overdose;
+import dog1s.overdose.block.custom.ModConsumableComponents;
 import dog1s.overdose.item.custom.DetectorItem;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
@@ -12,6 +13,8 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
 public class ModItems {
+
+    public static final Item WHITE_MONSTER = registerItem("white_monster", new Item(new FabricItemSettings().food(ModConsumableComponents.WHITE_MONSTER)));
 
     public static final Item SALT = registerItem("salt", new Item(new FabricItemSettings()));
 
