@@ -1,6 +1,7 @@
 package dog1s.overdose.block;
 
 import dog1s.overdose.Overdose;
+import dog1s.overdose.block.custom.WeedCropBlock;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
@@ -15,6 +16,9 @@ public class ModBlocks {
 
     public static final Block SALT_BLOCK = registerBlock("salt_block",
             new Block(FabricBlockSettings.copyOf(Blocks.SAND)));
+
+    public static final Block WEED_CROP = Registry.register(Registries.BLOCK, new Identifier(Overdose.MOD_ID, "weed_crop"),
+            new WeedCropBlock(FabricBlockSettings.copyOf(Blocks.WHEAT)));
 
 
     public static void registerModBlock(){

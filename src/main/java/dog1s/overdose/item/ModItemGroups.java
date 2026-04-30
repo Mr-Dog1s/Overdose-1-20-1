@@ -20,6 +20,8 @@ public class ModItemGroups {
                         entries.add(ModBlocks.SALT_BLOCK);
                         entries.add(ModItems.PEPPER);
                         entries.add(ModItems.DETECTOR);
+                        entries.add(ModItems.WHITE_MONSTER);
+                        entries.add(ModItems.WEED_SEEDS);
                     })).build());
 
     public static void registerItemGroups(){
