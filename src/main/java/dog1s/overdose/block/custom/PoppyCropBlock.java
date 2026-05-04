@@ -9,12 +9,12 @@ import net.minecraft.state.StateManager;
 import net.minecraft.state.property.IntProperty;
 import net.minecraft.state.property.Properties;
 
-public class WeedCropBlock extends CropBlock {
+public class PoppyCropBlock extends CropBlock {
 
     public static final int MAX_AGE = 5;
     public static final IntProperty AGE = Properties.AGE_5;
 
-    public WeedCropBlock(Settings settings){
+    public PoppyCropBlock(Settings settings){
         super(settings);
     }
 
@@ -35,6 +35,6 @@ public class WeedCropBlock extends CropBlock {
 
     @Override
     protected ItemConvertible getSeedsItem() {
-        return ModItems.COCA_SEEDS;
+        return ModItems.POPPY_SEEDS;
     }
 }

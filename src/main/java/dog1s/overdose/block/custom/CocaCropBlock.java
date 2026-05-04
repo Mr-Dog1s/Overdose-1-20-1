@@ -9,12 +9,12 @@ import net.minecraft.state.StateManager;
 import net.minecraft.state.property.IntProperty;
 import net.minecraft.state.property.Properties;
 
-public class WeedCropBlock extends CropBlock {
+public class CocaCropBlock extends CropBlock {
 
     public static final int MAX_AGE = 5;
     public static final IntProperty AGE = Properties.AGE_5;
 
-    public WeedCropBlock(Settings settings){
+    public CocaCropBlock(Settings settings){
         super(settings);
     }
 
