@@ -25,6 +25,8 @@ public class ModItems {
 
     public static final Item PEPPER = registerItem("pepper", new Item(new FabricItemSettings()));
 
+
+
     public static final Item POPPY_HEAD = registerItem("poppy_head", new Item(new FabricItemSettings()));
 
     public static final Item POPPY_JUICE = registerItem("poppy_juice", new Item(new FabricItemSettings()));

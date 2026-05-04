@@ -2,6 +2,7 @@ package dog1s.overdose.block;
 
 import dog1s.overdose.Overdose;
 import dog1s.overdose.block.custom.CocaCropBlock;
+import dog1s.overdose.block.custom.PoppyCropBlock;
 import dog1s.overdose.block.custom.WeedCropBlock;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
@@ -25,7 +26,8 @@ public class ModBlocks {
             new CocaCropBlock(FabricBlockSettings.copyOf(Blocks.BEETROOTS)));
 
     public static final Block POPPY_CROP = Registry.register(Registries.BLOCK, new Identifier(Overdose.MOD_ID, "poppy_crop"),
-            new CocaCropBlock(FabricBlockSettings.copyOf(Blocks.POPPY)));
+            new PoppyCropBlock(FabricBlockSettings.copyOf(Blocks.POPPY)));
+
 
 
     public static void registerModBlock(){
