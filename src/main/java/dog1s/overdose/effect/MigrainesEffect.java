@@ -7,13 +7,13 @@ import net.minecraft.entity.effect.StatusEffectCategory;
 import net.minecraft.entity.player.PlayerEntity;
 
 public class MigrainesEffect extends StatusEffect {
-    protected MigrainesEffect(StatusEffectCategory category, int color) {
-        super(category, color);
+
+    public MigrainesEffect() {
+        super(StatusEffectCategory.HARMFUL, 0xA8B8FF);
     }
 
     @Override
-
-    public boolean canApplyUpdateEffect(int duration, int amplifier){
+    public boolean canApplyUpdateEffect(int duration, int amplifier) {
         return true;
     }
 
@@ -31,5 +31,4 @@ public class MigrainesEffect extends StatusEffect {
             );
         }
     }
-
 }

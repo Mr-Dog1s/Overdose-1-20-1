@@ -6,5 +6,7 @@ public class OverdoseClient implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
+        MigrainesOverlayRenderer.register();
+        MigraineClientHandler.register();
     }
 }

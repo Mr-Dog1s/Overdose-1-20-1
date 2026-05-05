@@ -9,20 +9,45 @@ public class MigraineClientHandler {
     private static Double originalSensitivity = null;
     private static boolean modified = false;
 
-    public static void register(){
+    public static void register() {
         ClientTickEvents.END_CLIENT_TICK.register(
                 MigraineClientHandler::tick
         );
     }
 
-    public static void tick(MinecraftClient client){
-        if(client.player == null) return;
+    private static void tick(MinecraftClient client) {
+        if (client.player == null) return;
 
-        boolean hasMigraine = client.player.hasStatusEffect(ModEffects.MIGRAINE);
+        boolean hasMigraine =
+                client.player.hasStatusEffect(ModEffects.MIGRAINE);
 
-        if(hasMigraine && !modified){
-
+        if (hasMigraine && !modified) {
+            apply(client);
+        } else if (!hasMigraine && modified) {
+            restore(client);
         }
     }
 
+    private static void apply(MinecraftClient client) {
+        originalSensitivity =
+                client.options.getMouseSensitivity().getValue();
+
+        client.options.getMouseSensitivity().setValue(
+                originalSensitivity * 0.35
+        );
+
+        modified = true;
+    }
+
+    private static void restore(MinecraftClient client) {
+        if (originalSensitivity != null) {
+            client.options.getMouseSensitivity()
+                    .setValue(originalSensitivity);
+        }
+
+        modified = false;
+        originalSensitivity = null;
+    }
 }
+
+

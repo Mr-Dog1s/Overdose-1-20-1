@@ -1,5 +1,6 @@
 package dog1s.overdose.client;
 
+import com.mojang.blaze3d.systems.RenderSystem;
 import dog1s.overdose.Overdose;
 import dog1s.overdose.effect.ModEffects;
 import net.fabricmc.fabric.api.client.rendering.v1.HudRenderCallback;
@@ -28,9 +29,14 @@ public class MigrainesOverlayRenderer {
 
         if (!client.player.hasStatusEffect(ModEffects.MIGRAINE)) return;
 
-        float time = client.world.getTime() + tickDelta;
+        double time = client.world.getTime() + tickDelta;
 
-        float alpha = 0.08f + (float)Math.sin(time * 0.07f) * 0.05f;
+        float alpha = (float)(
+                0.06 + (Math.sin(time * 0.025) + 1.0) * 0.06
+        );
+
+        RenderSystem.enableBlend();
+        RenderSystem.defaultBlendFunc();
 
         context.setShaderColor(1f, 1f, 1f, alpha);
 
@@ -39,9 +45,11 @@ public class MigrainesOverlayRenderer {
                 0,
                 0,
                 0,
+                0,
                 client.getWindow().getScaledWidth(),
                 client.getWindow().getScaledHeight(),
-                client.getWindow().getScaledWidth()
+                512,
+                512
         );
 
         context.setShaderColor(1f,1f,1f,1f);
