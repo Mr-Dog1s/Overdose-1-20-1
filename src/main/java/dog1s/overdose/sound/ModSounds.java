@@ -19,5 +19,7 @@ public class ModSounds {
                 MIGRAINE_RING_ID,
                 MIGRAINE_RING
         );
+
+        System.out.println("Registered migraine sound");
     }
 }

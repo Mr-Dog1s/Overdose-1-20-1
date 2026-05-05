@@ -32,7 +32,7 @@ public class MigrainesOverlayRenderer {
         double time = client.world.getTime() + tickDelta;
 
         float alpha = (float)(
-                0.06 + (Math.sin(time * 0.025) + 1.0) * 0.06
+                0.06 + (Math.sin(time * 0.025) + 5.0) * 0.06
         );
 
         RenderSystem.enableBlend();
