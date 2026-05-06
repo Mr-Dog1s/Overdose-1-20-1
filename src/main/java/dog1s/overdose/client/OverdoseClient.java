@@ -8,6 +8,7 @@ public class OverdoseClient implements ClientModInitializer {
     public void onInitializeClient() {
         MigrainesOverlayRenderer.register();
         MigraineClientHandler.register();
+        ModShaders.init();
         ShaderRenderer.register();
     }
 }

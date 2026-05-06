@@ -1,6 +1,5 @@
 package dog1s.overdose.client;
 
-import dog1s.overdose.effect.ModEffects;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.minecraft.client.MinecraftClient;
 
@@ -10,9 +9,7 @@ public class MigraineClientHandler {
     private static boolean modified = false;
 
     public static void register() {
-        ClientTickEvents.END_CLIENT_TICK.register(
-                MigraineClientHandler::tick
-        );
+
     }
 
     public static void tick(MinecraftClient client) {
@@ -21,7 +18,7 @@ public class MigraineClientHandler {
         ModShaders.MIGRAINE.findUniform1f("Time")
                 .set(client.world.getTime() / 20f);
 
-        ModShaders.MIGRAINE.render(0);
+
     }
 
     private static void apply(MinecraftClient client) {
