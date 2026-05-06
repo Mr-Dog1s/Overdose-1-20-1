@@ -12,10 +12,13 @@ public class ShaderRenderer {
 
         ShaderEffectRenderCallback.EVENT.register(tickDelta -> {
 
+            System.out.println("MIGRAINE CALLBACK");
+
             MinecraftClient client = MinecraftClient.getInstance();
 
             if (client.world == null) return;
             if (ModShaders.MIGRAINE == null) return;
+
 
             ModShaders.MIGRAINE.render(tickDelta);
         });

@@ -1,9 +1,15 @@
 {
-  "vertex": "minecraft:blit",
+  "blend": {
+    "func": "add",
+    "srcrgb": "one",
+    "dstrgb": "zero"
+  },
+  "vertex": "blit",
   "fragment": "overdose:migraine",
-  "samplers": [
-    { "name": "DiffuseSampler" }
-  ],
-  "attributes": [],
-  "uniforms": []
+  "attributes": [ "Position" ],
+  "samplers": [],
+  "uniforms": [
+    { "name": "ProjMat", "type": "matrix4x4", "count": 16, "values": [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1] },
+    { "name": "OutSize", "type": "float", "count": 2, "values": [1, 1] }
+  ]
 }

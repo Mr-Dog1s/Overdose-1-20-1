@@ -1,6 +1,5 @@
 package dog1s.overdose.client;
 
-import dog1s.overdose.Overdose;
 import ladysnake.satin.api.managed.ManagedShaderEffect;
 import ladysnake.satin.api.managed.ShaderEffectManager;
 import net.minecraft.util.Identifier;
@@ -11,6 +10,8 @@ public class ModShaders {
 
     public static void init() {
         MIGRAINE = ShaderEffectManager.getInstance()
-                .manage(new Identifier(Overdose.MOD_ID, "shaders/post/migraine.json"));
+                .manage(new Identifier("overdose", "shaders/post/migraine.json"));
+
+        System.out.println("MIGRAINE SHADER LOADED: " + MIGRAINE);
     }
 }
