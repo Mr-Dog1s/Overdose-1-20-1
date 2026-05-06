@@ -1,6 +1,7 @@
 package dog1s.overdose;
 
 import dog1s.overdose.block.ModBlocks;
+import dog1s.overdose.client.ShaderRenderer;
 import dog1s.overdose.effect.ModEffects;
 import dog1s.overdose.item.ModItemGroups;
 import dog1s.overdose.item.ModItems;
@@ -20,5 +21,6 @@ public class Overdose implements ModInitializer {
         ModBlocks.registerModBlock();
         ModEffects.register();
         ModSounds.register();
+
     }
 }

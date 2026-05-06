@@ -1,0 +1,10 @@
+{
+  "targets": [],
+  "passes": [
+    {
+      "name": "overdose:migraine",
+      "intarget": "minecraft:main",
+      "outtarget": "minecraft:main"
+    }
+  ]
+}

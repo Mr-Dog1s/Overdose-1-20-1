@@ -15,17 +15,13 @@ public class MigraineClientHandler {
         );
     }
 
-    private static void tick(MinecraftClient client) {
-        if (client.player == null) return;
+    public static void tick(MinecraftClient client) {
+        if (client.world == null) return;
 
-        boolean hasMigraine =
-                client.player.hasStatusEffect(ModEffects.MIGRAINE);
+        ModShaders.MIGRAINE.findUniform1f("Time")
+                .set(client.world.getTime() / 20f);
 
-        if (hasMigraine && !modified) {
-            apply(client);
-        } else if (!hasMigraine && modified) {
-            restore(client);
-        }
+        ModShaders.MIGRAINE.render(0);
     }
 
     private static void apply(MinecraftClient client) {

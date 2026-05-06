@@ -1,0 +1,16 @@
+{
+  "vertex": "blit",
+  "fragment": "overdose:migraine",
+  "samplers": [
+    { "name": "DiffuseSampler" }
+  ],
+  "attributes": [],
+  "uniforms": [
+    {
+      "name": "Time",
+      "type": "float",
+      "count": 1,
+      "values": [0.0]
+    }
+  ]
+}
