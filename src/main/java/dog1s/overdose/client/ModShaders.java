@@ -11,6 +11,6 @@ public class ModShaders {
 
     public static void init() {
         MIGRAINE = ShaderEffectManager.getInstance()
-                .manage(new Identifier("overdose", "shaders/post/migraine.json"));
+                .manage(new Identifier(Overdose.MOD_ID, "shaders/post/migraine.json"));
     }
 }

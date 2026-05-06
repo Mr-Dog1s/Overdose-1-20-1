@@ -1,9 +1,16 @@
 {
-  "targets": [],
+  "targets": [
+    "swap"
+  ],
   "passes": [
     {
       "name": "overdose:migraine",
       "intarget": "minecraft:main",
+      "outtarget": "swap"
+    },
+    {
+      "name": "blit",
+      "intarget": "swap",
       "outtarget": "minecraft:main"
     }
   ]
