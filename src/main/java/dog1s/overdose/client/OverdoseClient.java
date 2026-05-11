@@ -19,6 +19,7 @@ public class OverdoseClient implements ClientModInitializer {
 
             System.out.println("Renderer is alive.");
 
+            ModFramebuffers.init();
             ModShaders.init();
             ShaderRenderer.register();
         });

@@ -10,17 +10,24 @@ public class ShaderRenderer {
 
     public static void register() {
 
-        ShaderEffectRenderCallback.EVENT.register(tickDelta -> {
+        MinecraftClient client = MinecraftClient.getInstance();
 
-            System.out.println("MIGRAINE CALLBACK");
+        client.getFramebuffer().beginWrite(false);
 
-            MinecraftClient client = MinecraftClient.getInstance();
+        ModFramebuffers.MIGRAINE_BUFFER.beginWrite(false);
+        /*
+        client.getFramebuffer().draw(
+                client.getWindow().getFramebufferWidth(),
+                client.getWindow().getFramebufferHeight()
+        );
+         */
 
-            if (client.world == null) return;
-            if (ModShaders.MIGRAINE == null) return;
 
+        client.getFramebuffer().beginWrite(false);
 
-            ModShaders.MIGRAINE.render(tickDelta);
-        });
+        ModShaders.MIGRAINE.findUniform1f("Time")
+                .set((client.world.getTime()) / 20f);
+
+        ModShaders.MIGRAINE.render(0);
     }
 }
